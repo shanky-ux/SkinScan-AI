@@ -1,52 +1,25 @@
-# 🩺 SkinScan-AI
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=SkinScan-AI&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
+</p>
 
-AI-based Skin Disease Classification Web Application built using **Python, PyTorch, and Streamlit**.
+<p align="center">
+  <b>AI-Powered Skin Disease Classification using Deep Learning</b>
+</p>
 
-This project predicts possible skin diseases from uploaded images using a trained deep learning model.
+<p align="center">
+  
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/PyTorch-DeepLearning-red?style=for-the-badge&logo=pytorch"/>
+  <img src="https://img.shields.io/badge/Streamlit-WebApp-ff4b4b?style=for-the-badge&logo=streamlit"/>
+  <img src="https://img.shields.io/badge/Computer%20Vision-CNN-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge"/>
 
----
-
-## 🚀 Features
-
-- 📷 Upload skin images
-- 🧠 Deep Learning based classification
-- ⚡ Real-time prediction using Streamlit
-- 📊 Accuracy optimization module
-- 🧩 Modular code structure
-
----
-
-## 🛠️ Tech Stack
-
-- Python
-- PyTorch
-- Streamlit
-- NumPy
-- PIL
-- Custom CNN Model
+</p>
 
 ---
 
-## 📁 Project Structure
+## 📌 Overview
 
-SkinScan-AI/
-│
-├── app.py # Main Streamlit app
-├── model_utils.py # Model loading & prediction logic
-├── image_processor.py # Image preprocessing functions
-├── accuracy_optimizer.py # Model evaluation logic
-├── attached_assets/ # Sample images & assets
-├── pyproject.toml # Dependencies
-├── .gitignore
-└── README.md
+SkinScan-AI is a deep learning-based web application that predicts possible skin diseases from uploaded images.
 
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/shanky-ux/SkinScan-AI.git
-cd SkinScan-AI
-
+It demonstrates the practical application of **Convolutional Neural Networks (CNNs)** in medical image classification using PyTorch and Streamlit.
