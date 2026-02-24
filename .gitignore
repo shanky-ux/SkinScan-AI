@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.local/
+.streamlit/
+.env
+venv/
+uv.lock
+attached_assets/*.pth
