@@ -26,7 +26,7 @@ It demonstrates the practical application of **Convolutional Neural Networks (CN
 
 ---
 
-## 🧠 Problem Statement
+## 🧠 Problem Statemen
 
 Skin diseases often present visually similar symptoms, making early-stage identification difficult without professional expertise.  
 This project aims to assist in preliminary classification of skin conditions using deep learning-based image recognition.
