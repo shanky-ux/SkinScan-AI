@@ -22,7 +22,7 @@ SkinScan-AI is a deep learning-powered web application that predicts potential s
 
 Built using PyTorch and deployed with Streamlit, this project demonstrates the practical implementation of Convolutional Neural Networks (CNNs) in medical image classification.
 
-The system showcases end-to-end integration of:
+The system showcases end-to-end integration of:..
 
 - Image preprocessing  
 - Deep learning model inference  
