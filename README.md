@@ -18,7 +18,7 @@
 
 ## 📌 Overview
 
-SkinScan-AI is a deep learning-powered web application that predicts potential skin diseases from uploaded image.
+SkinScan-AI is a deep learning-powered web application that predicts potential skin diseases from uploaded images.
 
 Built using PyTorch and deployed with Streamlit, this project demonstrates the practical implementation of Convolutional Neural Networks (CNNs) in medical image classification.
 
