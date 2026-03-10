@@ -5,3 +5,5 @@ scikit-learn
 opencv-python-headless
 pillow
 matplotlib
+torch
+torchvision
