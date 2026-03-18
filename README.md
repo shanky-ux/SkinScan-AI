@@ -16,7 +16,7 @@
 
 ---
 
-## 📌 Overviews
+## 📌 Overview
 
 SkinScan-AI is a deep learning-powered web application that predicts potential skin diseases from uploaded images.
 
