@@ -48,7 +48,7 @@ Regular commits are pushed to ensure scalability and long-term maintainability.
 
 ---
 
-## 🧠 Problem Statements
+## 🧠 Problem Statement
 
 Skin diseases often present visually similar symptoms, making early-stage identification challenging without professional expertise.
 
