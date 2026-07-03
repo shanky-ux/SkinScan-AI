@@ -12,9 +12,11 @@ RUN pip install --upgrade pip && pip install -r /app/backend/requirements.txt
 COPY backend /app/backend
 COPY attached_assets /app/attached_assets
 
+WORKDIR /app/backend
+
 ENV SKINSCAN_MODEL_PATH=attached_assets/skin_disease_model_1755756972916.pth
 ENV SKINSCAN_FRONTEND_ORIGIN=http://localhost:3000
 
 EXPOSE 8000
 
-CMD ["uvicorn", "skinscan_api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "uvicorn skinscan_api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
