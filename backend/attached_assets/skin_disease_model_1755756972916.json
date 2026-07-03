@@ -1,0 +1,22 @@
+{
+  "architecture": "efficientnet_b0",
+  "class_names": [
+    "Actinic keratosis",
+    "Basal cell carcinoma",
+    "Benign keratosis",
+    "Dermatofibroma",
+    "Melanocytic nevus",
+    "Melanoma",
+    "Vascular lesion"
+  ],
+  "image_size": 224,
+  "best_train_metrics": {
+    "loss": 1.6740353117782487,
+    "accuracy": 0.3466204506065858
+  },
+  "best_val_metrics": {
+    "loss": 2.6620445527957872,
+    "accuracy": 0.3231939163498099
+  },
+  "checkpoint_path": "C:\\Users\\stars\\Downloads\\SkinScan-AI-main\\SkinScan-AI-main\\attached_assets\\skin_disease_model_1755756972916.pth"
+}

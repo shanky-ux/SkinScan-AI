@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 210 40% 96%;
+  --panel: 0 0% 100%;
+  --line: 214 20% 88%;
+  --text: 222 47% 11%;
+  --muted: 215 14% 40%;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: 222 47% 7%;
+  --panel: 223 38% 10%;
+  --line: 220 16% 19%;
+  --text: 210 40% 96%;
+  --muted: 215 18% 72%;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(24, 189, 224, 0.12), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.09), transparent 28%),
+    hsl(var(--bg));
+  color: hsl(var(--text));
+}
+
+body::selection {
+  background: rgba(24, 189, 224, 0.35);
+  color: white;
+}
+
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #18bde0, #6366f1);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(24, 189, 224, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #18bde0, #6366f1);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(24, 189, 224, 0.4);
+}

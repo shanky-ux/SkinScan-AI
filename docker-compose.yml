@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      SKINSCAN_MODEL_PATH: attached_assets/skin_disease_model_1755756972916.pth
+      SKINSCAN_FRONTEND_ORIGIN: http://localhost:3000
+      SKINSCAN_ALLOW_DEMO_MODEL: "true"
+    volumes:
+      - ./attached_assets:/app/attached_assets:ro
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on:
+      - backend
