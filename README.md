@@ -186,6 +186,8 @@ SkinScan-AI uses a **CNN backbone (ResNet18 in training, EfficientNet-B0 in demo
 ---
 
 ## 📂 Project Structure
+
+```
 SkinScan-AI/
 │
 ├── backend/
@@ -226,18 +228,25 @@ SkinScan-AI/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
 ## 🔐 Environment Variables
 
 Frontend (`frontend/.env.local`):
+
+```
 NEXT_PUBLIC_API_URL=http://localhost:8000
+```
 
 Backend (set in Render dashboard or shell):
+
+```
 SKINSCAN_MODEL_PATH=attached_assets/skin_disease_model_1755756972916.pth
 SKINSCAN_FRONTEND_ORIGIN=http://localhost:3000
 SKINSCAN_ALLOW_DEMO_MODEL=true
+```
 
 ---
 
