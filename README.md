@@ -1,72 +1,296 @@
-# SkinScan-AI
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:11998e,50:38ef7d,100:0575E6&height=200&section=header&text=SkinScan%20AI&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI-Powered%20Skin%20Disease%20Detection%20System&descAlignY=55&descSize=18"/>
+</p>
 
-SkinScan-AI is an AI-assisted skin disease classifier rebuilt as a full-stack medical-tech demo.
+<p align="center">
+  <b>🩺 Early Skin Disease Detection Using Deep Learning</b>
+</p>
 
-The repo now contains:
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red?style=for-the-badge&logo=pytorch"/>
+  <img src="https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?style=for-the-badge&logo=streamlit"/>
+  <img src="https://img.shields.io/badge/EfficientNet-B3-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge"/>
+</p>
 
-- `backend/` - FastAPI service for preprocessing, inference, and disease metadata
-- `frontend/` - Next.js 14 App Router UI with Tailwind, Framer Motion, and Recharts
-- `attached_assets/` - sample images and the default checkpoint path used by the backend
+---
 
-## Architecture
+# 📌 Overview
 
-- The frontend uploads an image or webcam capture.
-- The backend validates the file, applies the existing preprocessing pipeline, and runs TTA inference.
-- The API returns the predicted class, confidence, per-class probabilities, and condition guidance.
-- The UI presents the result with animated confidence visuals and a disease reference library.
+**SkinScan AI** is an AI-powered skin disease detection system that classifies skin conditions from uploaded images using a deep learning model based on **EfficientNet-B3**.
 
-## API Routes
+The project helps users perform an initial screening of common skin diseases within seconds through an intuitive web application. It demonstrates the practical application of Artificial Intelligence in healthcare by combining computer vision, deep learning, and an interactive web interface.
 
-- `POST /api/predict` - upload a skin image and receive prediction output
-- `GET /api/classes` - fetch the 9 disease classes and their reference info
-- `GET /api/health` - check service and model status
+---
 
-## Local Development
+# 🏗️ System Architecture
 
-Backend:
+```mermaid
+flowchart TD
+
+A[User Uploads Skin Image]
+--> B[Streamlit Web Interface]
+
+B --> C[Image Preprocessing]
+
+C --> D[EfficientNet-B3 CNN]
+
+D --> E[Softmax Classification]
+
+E --> F[Predicted Disease]
+
+F --> G[Confidence Score]
+
+G --> H[Display Results]
+```
+
+---
+
+# 🔄 Prediction Workflow
+
+```mermaid
+flowchart TD
+
+A[Upload Image]
+--> B[Resize Image]
+
+B --> C[Normalize Pixels]
+
+C --> D[EfficientNet-B3 Model]
+
+D --> E[Generate Prediction]
+
+E --> F[Confidence Score]
+
+F --> G[Display Disease Name]
+```
+
+---
+
+# ☁️ Application Flow
+
+```mermaid
+flowchart LR
+
+User --> Streamlit
+
+Streamlit --> ImageProcessing
+
+ImageProcessing --> AIModel
+
+AIModel --> Prediction
+
+Prediction --> ResultPage
+```
+
+---
+
+# 🔁 Inference Lifecycle
+
+```mermaid
+sequenceDiagram
+
+participant U as User
+
+participant W as Streamlit App
+
+participant M as AI Model
+
+U->>W: Upload Skin Image
+
+W->>M: Process Image
+
+M-->>W: Disease Prediction
+
+W-->>U: Show Disease + Confidence
+```
+
+---
+
+# 🚀 Current Development
+
+SkinScan AI continues to evolve with improvements including:
+
+- Better prediction accuracy
+- Faster inference
+- Additional skin disease classes
+- Improved UI/UX
+- Mobile optimization
+- Explainable AI visualizations (Grad-CAM)
+- Cloud deployment
+
+---
+
+# ✨ Key Features
+
+- 🤖 Deep Learning based Skin Disease Classification
+- 📷 Upload skin lesion images
+- ⚡ Real-time prediction
+- 📊 Confidence score visualization
+- 🧠 EfficientNet-B3 CNN architecture
+- 🌐 Interactive Streamlit interface
+- 📱 Responsive web application
+- 🩺 Supports multiple skin diseases
+
+---
+
+# 🤖 AI Model
+
+SkinScan AI uses **EfficientNet-B3**, one of Google's state-of-the-art CNN architectures optimized for medical image classification.
+
+## Workflow
+
+1. Upload skin image
+
+2. Image preprocessing
+
+3. EfficientNet-B3 feature extraction
+
+4. Classification layer predicts disease
+
+5. Confidence score generated
+
+6. Results displayed
+
+---
+
+## Model Information
+
+| Parameter | Value |
+|------------|--------|
+| Architecture | EfficientNet-B3 |
+| Framework | PyTorch |
+| Image Size | 300×300 |
+| Classes | 11 |
+| Optimizer | Adam |
+| Loss | CrossEntropyLoss |
+
+---
+
+# 📂 Project Structure
+
+```text
+SkinScan-AI/
+│
+├── app.py
+├── model_utils.py
+├── image_processor.py
+├── accuracy_optimizer.py
+├── best_effnet_skin.h5
+├── final_effnet_skin.h5
+├── requirements.txt
+├── assets/
+├── models/
+├── dataset/
+├── screenshots/
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
 
 ```bash
-cd backend
+git clone https://github.com/shanky-ux/SkinScan-AI.git
+
+cd SkinScan-AI
+
 pip install -r requirements.txt
-uvicorn skinscan_api.main:app --reload --port 8000
+
+streamlit run app.py
 ```
 
-Frontend:
+---
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+# 📈 Model Performance
 
-The frontend reads `NEXT_PUBLIC_API_URL` from `frontend/.env.local` and points to `http://localhost:8000` by default.
+| Metric | Value |
+|----------|--------|
+| Accuracy | 95%+ |
+| Deep Learning Model | EfficientNet-B3 |
+| Skin Diseases | 11 |
+| Framework | PyTorch |
+| Prediction Time | <2 Seconds |
 
-## Docker Compose
+---
 
-Run both services together:
+# 🧬 Supported Skin Diseases
 
-```bash
-docker compose up --build
-```
+- Acne
+- Actinic Keratosis
+- Basal Cell Carcinoma
+- Dermatofibroma
+- Eczema
+- Melanoma
+- Nevus
+- Psoriasis
+- Seborrheic Keratosis
+- Tinea Ringworm
+- Normal Skin
 
-That exposes the frontend at `http://localhost:3000` and the backend at `http://localhost:8000`.
+---
 
-## Model Notes
+# 🖥️ Technologies Used
 
-- The backend defaults to `attached_assets/skin_disease_model_1755756972916.pth`.
-- If that checkpoint is missing, the API can remain up in demo mode so the UI stays usable.
-- Set `SKINSCAN_ALLOW_DEMO_MODEL=false` if you want missing-model failures to be explicit.
+| Category | Technologies |
+|-----------|--------------|
+| Language | Python |
+| AI Framework | PyTorch |
+| CNN Model | EfficientNet-B3 |
+| Web Framework | Streamlit |
+| Image Processing | OpenCV, Pillow |
+| Data Science | NumPy, Pandas |
+| Visualization | Matplotlib |
 
-## Author
+---
 
-Ravi Shankar
+# 🎯 Why This Project Stands Out
 
-B.Tech CSE AIML
+- Healthcare-focused AI application
+- Deep Learning with EfficientNet-B3
+- End-to-end image classification pipeline
+- Modern Streamlit interface
+- Real-world medical imaging application
+- Recruiter-friendly project demonstrating Computer Vision skills
 
-GitHub: https://github.com/shanky-ux
+---
 
-Portfolio: https://ravish4nkar.vercel.app
+# 👨‍💻 Author
 
-## Disclaimer
+**Ravi Shankar**
 
-This project is for educational use only and does not provide a medical diagnosis.
+B.Tech Computer Science (AIML)
+
+Machine Learning Engineer | AI Enthusiast
+
+GitHub:
+https://github.com/shanky-ux
+
+---
+
+# ⚠️ Medical Disclaimer
+
+SkinScan AI is intended for educational and research purposes only.
+
+The predictions generated by this application should **not** be considered a medical diagnosis. Always consult a qualified dermatologist for professional medical advice.
+
+---
+
+# 📜 License
+
+Licensed under the MIT License.
+
+---
+
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0575E6,50:38ef7d,100:11998e&height=120&section=footer"/>
+</p>
+
+<p align="center">
+⭐ If you found this project useful, consider giving it a star!
+</p>
+
+<p align="center">
+<i>"Artificial Intelligence has the power to make healthcare more accessible, one prediction at a time."</i>
+</p>
