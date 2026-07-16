@@ -10,7 +10,7 @@ COPY backend/requirements.txt /app/backend/requirements.txt
 RUN pip install --upgrade pip && pip install -r /app/backend/requirements.txt
 
 COPY backend /app/backend
-COPY attached_assets /app/attached_assets
+COPY backend/attached_assets /app/attached_assets
 
 WORKDIR /app/backend
 
