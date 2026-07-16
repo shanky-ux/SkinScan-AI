@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     app_name: str = "SkinScan-AI API"
     environment: str = "development"
-    model_path: str = os.getenv("SKINSCAN_MODEL_PATH", "attached_assets/skin_disease_model_1755756972916.pth")
+    model_path: str = os.getenv("SKINSCAN_MODEL_PATH", "backend/attached_assets/skin_disease_model_1755756972916.pth")
     frontend_origin: str = os.getenv("SKINSCAN_FRONTEND_ORIGIN", "http://localhost:3000")
     allow_demo_model: bool = os.getenv("SKINSCAN_ALLOW_DEMO_MODEL", "true").lower() == "true"
     max_upload_mb: int = 10
