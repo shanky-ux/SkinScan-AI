@@ -62,7 +62,7 @@ flowchart TD
 
 ---
 
-## 🔄 End-to-End Processing Flow
+## 🔄 End-to-End Processing Flows
 
 ```mermaid
 flowchart TD
