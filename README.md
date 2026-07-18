@@ -108,7 +108,7 @@ flowchart LR
 
 ---
 
-## 🔁 Prediction Request Lifecycle
+## 🔁 Prediction Request Lifecycles
 
 ```mermaid
 sequenceDiagram
